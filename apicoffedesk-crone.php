@@ -1,7 +1,7 @@
 <?php
 
 /**
- * need to use absolute paths on crons. At nazwa.pl for 123kawa.pl/sklep this is /home/phujola/ftp/sklep/
+ * need to use absolute paths on crons. At nazwa.pl for 123kawa.pl/sklep this is /home/konto/ftp/sklep/
  */
 require_once('/home/konto/ftp/sklep/wp-config.php');
 require_once('/home/konto/ftp/sklep/apicoffedesk-config.php');
