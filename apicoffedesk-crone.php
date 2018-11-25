@@ -51,7 +51,6 @@ class APICoffedesk
 
         curl_close($ch);
 
-        //print_r($this->successConnectAPI);
         if ($this->resultGetProductCURL == '<h1>Internal server error</h1>') {
             echo '<script>console.error("WYSTĄPIŁ WEWNĘTRZNY BŁĄD Połączenia z API Coffedesk. Prawdopodobnie błędny klucz.");</script>';
             $this->successConnectAPI = false;
@@ -155,7 +154,6 @@ class Shop123kawaSync
                 }
                 if ($changeRegularPrice == true or $changeSalePrice == true or $changeStock == true) {
                     $t = 'Akt. prod.: ' . $product123kawa["id_post"] . ' - ' . $product123kawa["title"] . ' - ';
-                //echo 'Zaktualizowano produkt: ' . $product123kawa["id_post"] . ' - ' . $product123kawa["title"] . PHP_EOL;
                     if ($changeRegularPrice == true) {
                         $t = $t . "Cena podst. z " . $product123kawa["regular_price"] . " na " . $productCoffedesk["regularPrice"] . " ";
                     }
@@ -205,7 +203,6 @@ class Shop123kawaSync
         $query = 'UPDATE wpxo_postmeta SET meta_value="' . $price . '" WHERE post_id="' . $id_prod . '" AND meta_key="_price"';
         $stmt = $this->connPDO->prepare($query);
         $stmt->execute();
-        //echo $id_prod.' - '.$price.'<br>';
     }
 
     public function updateProduct123kawaQuantity($id_prod, $quantity)
