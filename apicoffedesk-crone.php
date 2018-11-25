@@ -227,7 +227,6 @@ class Shop123kawaSync
     }
     /**
      * Comparison Price nad Stock, without making changes
-     * 
      */
 
     public function comparison()
